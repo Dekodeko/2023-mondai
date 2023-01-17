@@ -1,11 +1,21 @@
 import streamlit as st
 import ast
 
+# t1strt = ["第１３回カール大帝とヨーロッパの始まり",
+#     "１．:red[［　A　］]人の大移動",
+#     "（１）原始ゲルマン人の社会　※印欧族のケルト人が広く居住",
+#     "①現在地　バルト海沿岸→紀元前後頃には、ライン川～ドナウ川の北方牧畜・農耕生活",
+#     "②平和的移動　人口増加・耕地不足→傭兵・:red[［　B　］]としてローマ帝国内に移住",
+#     "（２）ゲルマン人の移動と西ローマ帝国の滅亡",
+#     "①移動開始　:red[［　C　］]人（匈奴？）の西進→東ゴート征服→３７５年、西ゴート族の南下がきっかけ",
+#     "②ローマ帝国の分裂　３９５年、東西分裂→移動は西ローマに集中（以後２００年継続）",
+#     "③:red[［　D　］]の大帝国　５世紀前半成立（神の災い）→西ローマがゲルマンと結んで撃破"]
+# t1strat = ["ゲルマン","？？？","フン","アッティラ"]             #　正解答
 anst1t = ['','','','']
 STR_ANSCL="解答欄"
 STR_OK = "－ＯＫ－"
 STR_NG = "－ＮＧ－"
-f = open('rekishi.txt', 'r', encoding='shift_jis')
+f = open('rekishi3.txt', 'r', encoding='shift_jis')
 fstr = f.read()
 print("file >",fstr)
 f.close()
@@ -24,6 +34,7 @@ print("fddct= ",fddct)
 # for wstr in fddct["asc11"]:  print(wstr)
 # print('ans11 = ')
 # for wstr in fddct["ans11"]:   print(wstr)
+
 st.subheader(fddct["title"])
 tab1, tab2, tab3 = st.tabs([fddct["tabt"][0],fddct["tabt"][1],fddct["tabt"][2]])
 with tab1:
