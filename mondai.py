@@ -1,16 +1,16 @@
 import streamlit as st
 import ast
-# 定数
+# constant
 STR_ANSCL="解答欄(全角)"
 STR_SEEANS = "答えを見る"
 STR_OK = "－ＯＫ－"
 STR_NG = "－ＮＧ－"
 DSP_LCOL = 2   # 左表示カラム数
 DSP_RCOL = 1   # 右表示カラム数
-# main()
+# main
 f = open('rekishi.txt', 'r', encoding='shift_jis')  # 問題データ一括読み込み
 fstr = f.read()
-print("file >",fstr)
+# print("file >",fstr)
 f.close()
 fddct = ast.literal_eval(fstr)    # 文字列から、辞書型へ
 anst11 = [''] * len(fddct["asc11"])       # 13-1 問題数初期化　文字列リスト
@@ -24,9 +24,14 @@ anst22 = [''] * len(fddct["asc22"])       # 14-2 問題数初期化　文字列�
 anst23 = [''] * len(fddct["asc23"])       # 14-3 問題数初期化　文字列リスト
 anst24 = [''] * len(fddct["asc24"])       # 14-4 問題数初期化　文字列リスト
 anst25 = [''] * len(fddct["asc25"])       # 14-5 問題数初期化　文字列リスト
-anst26 = [''] * len(fddct["asc26"])       # 14-5 問題数初期化　文字列リスト
+anst26 = [''] * len(fddct["asc26"])       # 14-6 問題数初期化　文字列リスト
+anst31 = [''] * len(fddct["asc31"])       # 15-1 問題数初期化　文字列リスト
+anst32 = [''] * len(fddct["asc32"])       # 15-2 問題数初期化　文字列リスト
+anst33 = [''] * len(fddct["asc33"])       # 15-3 問題数初期化　文字列リスト
+anst34 = [''] * len(fddct["asc34"])       # 15-4 問題数初期化　文字列リスト
+anst35 = [''] * len(fddct["asc35"])       # 15-5 問題数初期化　文字列リスト
 
-print("fddct= ",fddct)         # debug 
+# print("fddct= ",fddct)         # debug 
 # print("fddct > ",type(fddct))
 # val = fddct["title"]
 # print('title = ',val)
@@ -50,7 +55,7 @@ with tab1:  #13
         t11col1, t11col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs11"]:
             t11col1.caption(ws)
-        t11col2.subheader(STR_ANSCL)
+        t11col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc11"]):
             anst11[i] = t11col2.text_input(':red[［' + asc + '］]', '')
             if len(anst11[i]) == 0:
@@ -70,7 +75,7 @@ with tab1:  #13
         t12col1, t12col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs12"]:
             t12col1.caption(ws)
-        t12col2.subheader(STR_ANSCL)
+        t12col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc12"]):
             anst12[i] = t12col2.text_input(':red[［' + asc + '］]', '')
             if len(anst12[i]) == 0:
@@ -90,7 +95,7 @@ with tab1:  #13
         t13col1, t13col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs13"]:
             t13col1.caption(ws)
-        t13col2.subheader(STR_ANSCL)
+        t13col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc13"]):
             anst13[i] = t13col2.text_input(':red[［' + asc + '］]', '')
             if len(anst13[i]) == 0:
@@ -110,7 +115,7 @@ with tab1:  #13
         t14col1, t14col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs14"]:
             t14col1.caption(ws)
-        t14col2.subheader(STR_ANSCL)
+        t14col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc14"]):
             anst14[i] = t14col2.text_input(':red[［' + asc + '］]', '')
             if len(anst14[i]) == 0:
@@ -130,7 +135,7 @@ with tab1:  #13
         t15col1, t15col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs15"]:
             t15col1.caption(ws)
-        t15col2.subheader(STR_ANSCL)
+        t15col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc15"]):
             anst15[i] = t15col2.text_input(':red[［' + asc + '］]', '')
             if len(anst15[i]) == 0:
@@ -150,7 +155,7 @@ with tab1:  #13
         t16col1, t16col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs16"]:
             t16col1.caption(ws)
-        t16col2.subheader(STR_ANSCL)
+        t16col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc16"]):
             anst16[i] = t16col2.text_input(':red[［' + asc + '］]', '')
             if len(anst16[i]) == 0:
@@ -173,7 +178,7 @@ with tab2:
         t21col1, t21col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs21"]:
             t21col1.caption(ws)
-        t21col2.subheader(STR_ANSCL)
+        t21col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc21"]):
             anst21[i] = t21col2.text_input(':red[［' + asc + '］]', '')
             if len(anst21[i]) == 0:
@@ -193,7 +198,7 @@ with tab2:
         t22col1, t22col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs22"]:
             t22col1.caption(ws)
-        t22col2.subheader(STR_ANSCL)
+        t22col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc22"]):
             anst22[i] = t22col2.text_input(':red[［' + asc + '］]', '')
             if len(anst22[i]) == 0:
@@ -213,7 +218,7 @@ with tab2:
         t23col1, t23col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs23"]:
             t23col1.caption(ws)
-        t23col2.subheader(STR_ANSCL)
+        t23col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc23"]):
             anst23[i] = t23col2.text_input(':red[［' + asc + '］]', '')
             if len(anst23[i]) == 0:
@@ -233,7 +238,7 @@ with tab2:
         t24col1, t24col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs24"]:
             t24col1.caption(ws)
-        t24col2.subheader(STR_ANSCL)
+        t24col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc24"]):
             anst24[i] = t24col2.text_input(':red[［' + asc + '］]', '')
             if len(anst24[i]) == 0:
@@ -253,7 +258,7 @@ with tab2:
         t25col1, t25col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs25"]:
             t25col1.caption(ws)
-        t25col2.subheader(STR_ANSCL)
+        t25col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc25"]):
             anst25[i] = t25col2.text_input(':red[［' + asc + '］]', '')
             if len(anst25[i]) == 0:
@@ -273,7 +278,7 @@ with tab2:
         t26col1, t26col2 = st.columns([DSP_LCOL, DSP_RCOL])
         for ws in fddct["pbs26"]:
             t26col1.caption(ws)
-        t26col2.subheader(STR_ANSCL)
+        t26col2.caption(STR_ANSCL)
         for i,asc in enumerate(fddct["asc26"]):
             anst26[i] = t26col2.text_input(':red[［' + asc + '］]', '')
             if len(anst26[i]) == 0:
@@ -290,4 +295,105 @@ with tab2:
         exp26str = exp26str+ '　　'
         expander.write(exp26str)
 with tab3:
-    st.subheader(':blue[古代インドと東南アジア]')
+    tab31,tab32,tab33,tab34,tab35 = \
+    st.tabs([fddct["tab3"][0],fddct["tab3"][1],fddct["tab3"][2],fddct["tab3"][3],fddct["tab3"][4]])
+    with tab31: # 15-1
+        t31col1, t31col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        for ws in fddct["pbs31"]:
+            t31col1.caption(ws)
+        t31col2.caption(STR_ANSCL)
+        for i,asc in enumerate(fddct["asc31"]):
+            anst31[i] = t31col2.text_input(':red[［' + asc + '］]', '')
+            if len(anst31[i]) == 0:
+                ws = " "
+            elif anst31[i] == fddct["ans31"][i]:
+                ws = ':green[' + STR_OK + ']'
+            else:
+                ws = ':violet[' + STR_NG + ']'
+            t31col2.caption(ws)
+        expander = st.expander(STR_SEEANS)
+        exp31str = '　　'
+        for asc,ans in zip(fddct["asc31"],fddct["ans31"]):
+            exp31str = exp31str + '[' + asc + ']' + ans + '　'
+        exp31str = exp31str+ '　　'
+        expander.write(exp31str)
+    with tab32: # 15-2
+        t32col1, t32col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        for ws in fddct["pbs32"]:
+            t32col1.caption(ws)
+        t32col2.caption(STR_ANSCL)
+        for i,asc in enumerate(fddct["asc32"]):
+            anst32[i] = t32col2.text_input(':red[［' + asc + '］]', '')
+            if len(anst32[i]) == 0:
+                ws = " "
+            elif anst32[i] == fddct["ans32"][i]:
+                ws = ':green[' + STR_OK + ']'
+            else:
+                ws = ':violet[' + STR_NG + ']'
+            t32col2.caption(ws)
+        expander = st.expander(STR_SEEANS)
+        exp32str = '　　'
+        for asc,ans in zip(fddct["asc32"],fddct["ans32"]):
+            exp32str = exp32str + '[' + asc + ']' + ans + '　'
+        exp32str = exp32str+ '　　'
+        expander.write(exp32str)
+    with tab33: # 15-3
+        t33col1, t33col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        for ws in fddct["pbs33"]:
+            t33col1.caption(ws)
+        t33col2.caption(STR_ANSCL)
+        for i,asc in enumerate(fddct["asc33"]):
+            anst33[i] = t33col2.text_input(':red[［' + asc + '］]', '')
+            if len(anst33[i]) == 0:
+                ws = " "
+            elif anst33[i] == fddct["ans33"][i]:
+                ws = ':green[' + STR_OK + ']'
+            else:
+                ws = ':violet[' + STR_NG + ']'
+            t33col2.caption(ws)
+        expander = st.expander(STR_SEEANS)
+        exp33str = '　　'
+        for asc,ans in zip(fddct["asc33"],fddct["ans33"]):
+            exp33str = exp33str + '[' + asc + ']' + ans + '　'
+        exp33str = exp33str+ '　　'
+        expander.write(exp33str)
+    with tab34: # 15-4
+        t34col1, t34col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        for ws in fddct["pbs34"]:
+            t34col1.caption(ws)
+        t34col2.caption(STR_ANSCL)
+        for i,asc in enumerate(fddct["asc34"]):
+            anst34[i] = t34col2.text_input(':red[［' + asc + '］]', '')
+            if len(anst34[i]) == 0:
+                ws = " "
+            elif anst34[i] == fddct["ans34"][i]:
+                ws = ':green[' + STR_OK + ']'
+            else:
+                ws = ':violet[' + STR_NG + ']'
+            t34col2.caption(ws)
+        expander = st.expander(STR_SEEANS)
+        exp34str = '　　'
+        for asc,ans in zip(fddct["asc34"],fddct["ans34"]):
+            exp34str = exp34str + '[' + asc + ']' + ans + '　'
+        exp34str = exp34str+ '　　'
+        expander.write(exp34str)
+with tab35: # 15-5
+        t35col1, t35col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        for ws in fddct["pbs35"]:
+            t35col1.caption(ws)
+        t35col2.caption(STR_ANSCL)
+        for i,asc in enumerate(fddct["asc35"]):
+            anst35[i] = t35col2.text_input(':red[［' + asc + '］]', '')
+            if len(anst35[i]) == 0:
+                ws = " "
+            elif anst35[i] == fddct["ans35"][i]:
+                ws = ':green[' + STR_OK + ']'
+            else:
+                ws = ':violet[' + STR_NG + ']'
+            t35col2.caption(ws)
+        expander = st.expander(STR_SEEANS)
+        exp35str = '　　'
+        for asc,ans in zip(fddct["asc35"],fddct["ans35"]):
+            exp35str = exp35str + '[' + asc + ']' + ans + '　'
+        exp35str = exp35str+ '　　'
+        expander.write(exp35str)
