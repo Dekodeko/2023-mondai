@@ -51,6 +51,21 @@ anst32 = [''] * len(fddct["asc32"])       # 15-2 問題数初期化　文字列�
 anst33 = [''] * len(fddct["asc33"])       # 15-3 問題数初期化　文字列リスト
 anst34 = [''] * len(fddct["asc34"])       # 15-4 問題数初期化　文字列リスト
 anst35 = [''] * len(fddct["asc35"])       # 15-5 問題数初期化　文字列リスト
+anst41 = [''] * len(fddct["asc41"])       # 16-1 問題数初期化　文字列リスト
+anst42 = [''] * len(fddct["asc42"])       # 16-2 問題数初期化　文字列リスト
+anst43 = [''] * len(fddct["asc43"])       # 16-3 問題数初期化　文字列リスト
+anst44 = [''] * len(fddct["asc44"])       # 16-4 問題数初期化　文字列リスト
+anst45 = [''] * len(fddct["asc45"])       # 16-5 問題数初期化　文字列リスト
+anst51 = [''] * len(fddct["asc51"])       # 17-1 問題数初期化　文字列リスト
+anst52 = [''] * len(fddct["asc52"])       # 17-2 問題数初期化　文字列リスト
+anst53 = [''] * len(fddct["asc53"])       # 17-3 問題数初期化　文字列リスト
+anst54 = [''] * len(fddct["asc54"])       # 17-4 問題数初期化　文字列リスト
+anst55 = [''] * len(fddct["asc55"])       # 17-5 問題数初期化　文字列リスト
+anst56 = [''] * len(fddct["asc56"])       # 17-5 問題数初期化　文字列リスト
+anst61 = [''] * len(fddct["asc61"])       # 18-1 問題数初期化　文字列リスト
+anst62 = [''] * len(fddct["asc62"])       # 18-2 問題数初期化　文字列リスト
+anst63 = [''] * len(fddct["asc63"])       # 18-3 問題数初期化　文字列リスト
+anst64 = [''] * len(fddct["asc64"])       # 18-4 問題数初期化　文字列リスト
 # print("fddct= ",fddct)         # debug 
 # print("fddct > ",type(fddct))
 # val = fddct["title"]
@@ -65,9 +80,10 @@ anst35 = [''] * len(fddct["asc35"])       # 15-5 問題数初期化　文字列�
 # for wstr in fddct["asc11"]:  print(wstr)
 # print('ans11 = ')
 # for wstr in fddct["ans11"]:   print(wstr)
-
+# ------------------------------------------------------------------------------------
 st.write(fddct["title"])
-tab1, tab2, tab3 = st.tabs([fddct["tabt"][0],fddct["tabt"][1],fddct["tabt"][2]])
+tab1, tab2, tab3, tab4, tab5, tab6 = \
+    st.tabs([fddct["tabt"][0],fddct["tabt"][1],fddct["tabt"][2],fddct["tabt"][3],fddct["tabt"][4],fddct["tabt"][5]])
 with tab1:  #13
     tab11,tab12,tab13,tab14,tab15,tab16 = \
     st.tabs([fddct["tab1"][0],fddct["tab1"][1],fddct["tab1"][2],fddct["tab1"][3],fddct["tab1"][4],fddct["tab1"][5]])
@@ -89,7 +105,7 @@ with tab1:  #13
     with tab16: # 13-6
         t16col1, t16col2 = st.columns([DSP_LCOL, DSP_RCOL])
         sub_test(t16col1, t16col2, fddct["pbs16"], fddct["asc16"], fddct["ans16"] )
-with tab2:
+with tab2:  #14
     tab21,tab22,tab23,tab24,tab25,tab26,tab27,tab28,tab29 = \
     st.tabs([fddct["tab2"][0],fddct["tab2"][1],fddct["tab2"][2],fddct["tab2"][3],fddct["tab2"][4] \
              ,fddct["tab2"][5],fddct["tab2"][6],fddct["tab2"][7],fddct["tab2"][8]])
@@ -120,7 +136,7 @@ with tab2:
     with tab29: # 14-9
         t29col1, t29col2 = st.columns([DSP_LCOL, DSP_RCOL])
         sub_test(t29col1, t29col2, fddct["pbs29"], fddct["asc29"], fddct["ans29"] )
-with tab3:
+with tab3:  #15
     tab31,tab32,tab33,tab34,tab35 = \
     st.tabs([fddct["tab3"][0],fddct["tab3"][1],fddct["tab3"][2],fddct["tab3"][3],fddct["tab3"][4]])
     with tab31: # 15-1
@@ -135,6 +151,57 @@ with tab3:
     with tab34: # 15-4
         t34col1, t34col2 = st.columns([DSP_LCOL, DSP_RCOL])
         sub_test(t34col1, t34col2, fddct["pbs34"], fddct["asc34"], fddct["ans34"] )
-with tab35: # 15-5
+    with tab35: # 15-5
         t35col1, t35col2 = st.columns([DSP_LCOL, DSP_RCOL])
         sub_test(t35col1, t35col2, fddct["pbs35"], fddct["asc35"], fddct["ans35"] )
+with tab4:  #16
+    tab41,tab42,tab43,tab44,tab45 = \
+    st.tabs([fddct["tab4"][0],fddct["tab4"][1],fddct["tab4"][2],fddct["tab4"][3],fddct["tab4"][4]])
+    with tab41: # 16-1
+        t41col1, t41col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t41col1, t41col2, fddct["pbs41"], fddct["asc41"], fddct["ans41"] )
+    with tab42: # 16-2
+        t42col1, t42col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t42col1, t42col2, fddct["pbs42"], fddct["asc42"], fddct["ans42"] )
+    with tab43: # 16-3
+        t43col1, t43col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t43col1, t43col2, fddct["pbs43"], fddct["asc43"], fddct["ans43"] )
+    with tab44: # 16-4
+        t44col1, t44col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t44col1, t44col2, fddct["pbs44"], fddct["asc44"], fddct["ans44"] )
+    with tab45: # 16-5
+        t45col1, t45col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t45col1, t45col2, fddct["pbs45"], fddct["asc45"], fddct["ans45"] )
+with tab5:  #17
+    tab51,tab52,tab53,tab54,tab55 = \
+    st.tabs([fddct["tab5"][0],fddct["tab5"][1],fddct["tab5"][2],fddct["tab5"][3],fddct["tab5"][4]])
+    with tab51: # 17-1
+        t51col1, t51col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t51col1, t51col2, fddct["pbs51"], fddct["asc51"], fddct["ans51"] )
+    with tab52: # 17-2
+        t52col1, t52col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t52col1, t52col2, fddct["pbs52"], fddct["asc52"], fddct["ans52"] )
+    with tab53: # 17-3
+        t53col1, t53col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t53col1, t53col2, fddct["pbs53"], fddct["asc53"], fddct["ans53"] )
+    with tab54: # 17-4
+        t54col1, t54col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t54col1, t54col2, fddct["pbs54"], fddct["asc54"], fddct["ans54"] )
+    with tab55: # 17-5
+        t55col1, t55col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t55col1, t55col2, fddct["pbs55"], fddct["asc55"], fddct["ans55"] )
+with tab6:  #18
+    tab61,tab62,tab63,tab64 = \
+    st.tabs([fddct["tab6"][0],fddct["tab6"][1],fddct["tab6"][2],fddct["tab6"][3]])
+    with tab61: # 18-1
+        t61col1, t61col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t61col1, t61col2, fddct["pbs61"], fddct["asc61"], fddct["ans61"] )
+    with tab62: # 18-2
+        t62col1, t62col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t62col1, t62col2, fddct["pbs62"], fddct["asc62"], fddct["ans62"] )
+    with tab63: # 18-3
+        t63col1, t63col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t63col1, t63col2, fddct["pbs63"], fddct["asc63"], fddct["ans63"] )
+    with tab64: # 18-4
+        t64col1, t64col2 = st.columns([DSP_LCOL, DSP_RCOL])
+        sub_test(t64col1, t64col2, fddct["pbs64"], fddct["asc64"], fddct["ans64"] )
